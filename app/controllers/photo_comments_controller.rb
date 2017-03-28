@@ -1,6 +1,7 @@
 class PhotoCommentsController < ApplicationController
   def index
-    @photo_comments = PhotoComment.page(params[:page]).per(10)
+    @q = PhotoComment.ransack(params[:q])
+    @photo_comments = @q.result(:distinct => true).page(params[:page]).per(10)
 
     render("photo_comments/index.html.erb")
   end
