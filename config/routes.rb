@@ -1,4 +1,21 @@
 Rails.application.routes.draw do
+  # Routes for the Photo_comment resource:
+  # CREATE
+  get "/photo_comments/new", :controller => "photo_comments", :action => "new"
+  post "/create_photo_comment", :controller => "photo_comments", :action => "create"
+
+  # READ
+  get "/photo_comments", :controller => "photo_comments", :action => "index"
+  get "/photo_comments/:id", :controller => "photo_comments", :action => "show"
+
+  # UPDATE
+  get "/photo_comments/:id/edit", :controller => "photo_comments", :action => "edit"
+  post "/update_photo_comment/:id", :controller => "photo_comments", :action => "update"
+
+  # DELETE
+  get "/delete_photo_comment/:id", :controller => "photo_comments", :action => "destroy"
+  #------------------------------
+
   # Routes for the Follow resource:
   # CREATE
   get "/follows/new", :controller => "follows", :action => "new"
