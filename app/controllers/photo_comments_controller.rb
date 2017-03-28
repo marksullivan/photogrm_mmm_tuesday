@@ -1,6 +1,6 @@
 class PhotoCommentsController < ApplicationController
   def index
-    @photo_comments = PhotoComment.all
+    @photo_comments = PhotoComment.page(params[:page]).per(10)
 
     render("photo_comments/index.html.erb")
   end
