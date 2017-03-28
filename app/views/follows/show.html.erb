@@ -6,7 +6,13 @@
   <div class="col-md-12 mb-2">
     <dl class="dl-horizontal">
       <dt>Follower</dt>
-      <dd><%= @follow.follower_id %></dd>
+      <dd>
+        <% if @follow.follower.present? %>
+          <a href="/users/<%= @follow.follower_id %>">
+            <%= @follow.follower.email %>
+          </a>
+        <% end %>
+      </dd>
 
       <dt>Followee</dt>
       <dd><%= @follow.followee_id %></dd>

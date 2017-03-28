@@ -16,7 +16,13 @@
 
       <% @follows.each do |follow| %>
       <tr>
-        <td><%= follow.follower.email %></td>
+        <td>
+          <% if follow.follower.present? %>
+            <a href="/users/<%= follow.follower.id %>">
+              <%= follow.follower.email %>
+            </a>
+          <% end %>
+        </td>
         <td><%= follow.followee_id %></td>
         <td>
           <a href="/follows/<%= follow.id %>" class="btn btn-primary">Show</a>
