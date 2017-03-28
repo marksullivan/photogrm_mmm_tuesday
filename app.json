@@ -1,0 +1,1 @@
+{"name":"Photogrm MMM Tuesday","repository":"https://github.com/marksullivan/photogrm_mmm_tuesday","env":{"CLOUDINARY_CLOUD_NAME":{"required":true},"CLOUDINARY_API_KEY":{"required":true},"CLOUDINARY_API_SECRET":{"required":true},"ROLLBAR_ACCESS_TOKEN":{"required":true}}}
